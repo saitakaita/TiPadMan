@@ -19,6 +19,7 @@
 		100BB01218496C9100398D43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100BAFFA18496C9100398D43 /* UIKit.framework */; };
 		100BB01A18496C9100398D43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 100BB01818496C9100398D43 /* InfoPlist.strings */; };
 		100BB01C18496C9100398D43 /* TiPadManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BB01B18496C9100398D43 /* TiPadManTests.m */; };
+		100BB02818496ED500398D43 /* TMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BB02718496ED500398D43 /* TMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		100BB01718496C9100398D43 /* TiPadManTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TiPadManTests-Info.plist"; sourceTree = "<group>"; };
 		100BB01918496C9100398D43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		100BB01B18496C9100398D43 /* TiPadManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiPadManTests.m; sourceTree = "<group>"; };
+		100BB02618496ED500398D43 /* TMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMainViewController.h; path = Controller/TMainViewController.h; sourceTree = "<group>"; };
+		100BB02718496ED500398D43 /* TMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMainViewController.m; path = Controller/TMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		100BAFFC18496C9100398D43 /* TiPadMan */ = {
 			isa = PBXGroup;
 			children = (
+				100BB02518496E1800398D43 /* Controller */,
 				100BB00518496C9100398D43 /* AppDelegate.h */,
 				100BB00618496C9100398D43 /* AppDelegate.m */,
 				100BB00818496C9100398D43 /* Images.xcassets */,
@@ -142,6 +146,15 @@
 				100BB01818496C9100398D43 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		100BB02518496E1800398D43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				100BB02618496ED500398D43 /* TMainViewController.h */,
+				100BB02718496ED500398D43 /* TMainViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100BB02818496ED500398D43 /* TMainViewController.m in Sources */,
 				100BB00718496C9100398D43 /* AppDelegate.m in Sources */,
 				100BB00318496C9100398D43 /* main.m in Sources */,
 			);
@@ -299,7 +313,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tomohiko yamada (4VC78GY2ZF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tomohiko yamada (4VC78GY2ZF)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -317,6 +332,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "0E56F85E-471E-4F53-9B83-54A70BEDF88B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -339,7 +355,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tomohiko yamada (4VC78GY2ZF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tomohiko yamada (4VC78GY2ZF)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -350,6 +367,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "0E56F85E-471E-4F53-9B83-54A70BEDF88B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -361,10 +379,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: tomohiko yamada (4VC78GY2ZF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TiPadMan/TiPadMan-Prefix.pch";
 				INFOPLIST_FILE = "TiPadMan/TiPadMan-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0E56F85E-471E-4F53-9B83-54A70BEDF88B";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,10 +395,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: tomohiko yamada (4VC78GY2ZF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TiPadMan/TiPadMan-Prefix.pch";
 				INFOPLIST_FILE = "TiPadMan/TiPadMan-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0E56F85E-471E-4F53-9B83-54A70BEDF88B";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -443,6 +467,7 @@
 				100BB02118496C9100398D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		100BB02218496C9100398D43 /* Build configuration list for PBXNativeTarget "TiPadManTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +476,7 @@
 				100BB02418496C9100398D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

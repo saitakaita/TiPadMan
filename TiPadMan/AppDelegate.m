@@ -7,16 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "TMainViewController.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+  TMainViewController *_view;
+}
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  _view = [[TMainViewController alloc] init];
+  UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:_view];
+  self.window.rootViewController = navi;
+  [self.window makeKeyAndVisible];
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
